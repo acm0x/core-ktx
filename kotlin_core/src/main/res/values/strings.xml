@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ACM64 Kotlin Core</string>
+    <!-- GENERIC ERROR RESOURCES -->
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+
+</resources>

@@ -1,0 +1,59 @@
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+version  '0.1'
+group = 'uk.acm64.kotlin'
+
+publishing {
+    publications {
+        Production(MavenPublication) {
+            artifact("$buildDir/outputs/aar/kotlin_core-release.aar")
+            groupId
+            artifactId 'core'
+            version this.version
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+
+                // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.implementation.allDependencies.each {
+                    // Ensure dependencies such as fileTree are not included in the pom.
+                    if (it.name != 'unspecified') {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = 'smudgy'// System.getenv('BINTRAY_USER')
+    key = '5e0bf75a8426d149a64af7e4f9ada7ba895e15b8' //System.getenv('BINTRAY_KEY')
+    publications = ['Production']
+//    configurations = ['archives']
+    pkg {
+        repo = 'android'
+        name = 'acm64-kotlin-core'
+        publish true
+        dryRun false
+        override  true
+        userOrg = 'acm64'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/ACM64/kotlin-core.git'
+        labels = ['android', 'kotlin']
+        version {
+            name = this.version
+            released = new Date()
+            vcsTag = this.version
+        }
+    }
+}
+
+
+
+
+
