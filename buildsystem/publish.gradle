@@ -2,15 +2,16 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-version AppConfig.Publish.version
-group = AppConfig.Publish.group
+version AppPublish.version
+group = AppPublish.group
 
 publishing {
     publications {
         Production(MavenPublication) {
+            // FIXME: introduce module_name to abstract it out
             artifact("$buildDir/outputs/aar/kotlin_core-release.aar")
             groupId
-            artifactId AppConfig.Publish.name
+            artifactId AppPublish.name
             version this.version
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
