@@ -8,7 +8,7 @@ object AppConfig {
 object AppPublish {
     const val group = "uk.acm64.kotlin"
     const val name = "core"
-    const val version = "0.1"
+    const val version = "0.2"
 
 }
 
