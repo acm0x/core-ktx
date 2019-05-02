@@ -2,15 +2,15 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-version  '0.1'
-group = 'uk.acm64.kotlin'
+version AppConfig.Publish.version
+group = AppConfig.Publish.group
 
 publishing {
     publications {
         Production(MavenPublication) {
             artifact("$buildDir/outputs/aar/kotlin_core-release.aar")
             groupId
-            artifactId 'core'
+            artifactId AppConfig.Publish.name
             version this.version
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
@@ -43,7 +43,7 @@ bintray {
         override  true
         userOrg = 'acm64'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/ACM64/kotlin-core.git'
+        vcsUrl = 'https://github.com/ACM64/android-kotlin-core.git'
         labels = ['android', 'kotlin']
         version {
             name = this.version

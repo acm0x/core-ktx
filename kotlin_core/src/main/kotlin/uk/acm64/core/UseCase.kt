@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
  * By convention each [UseCase] implementation will execute its job in a background thread
  * (kotlin coroutine) and will post the result in the UI thread.
  */
+@SuppressWarnings
 abstract class UseCase<out Type, in Params> where Type : Any {
 
     abstract suspend fun run(params: Params): Either<Failure, Type>
@@ -23,5 +24,6 @@ abstract class UseCase<out Type, in Params> where Type : Any {
     }
 
     class None
+    @Suppress("UNUSED_PARAMETER")
     class Result(success: Boolean = true)
 }
