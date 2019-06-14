@@ -7,9 +7,9 @@ buildscript {
     }
     dependencies {
         classpath(ProjectDependencies.androidGradlePlugin)
-        classpath( ProjectDependencies.kotlinGradlePlugin)
-        classpath( ProjectDependencies.mavenGradlePlugin)
-        classpath( ProjectDependencies.bintrayPlugin)
+        classpath(ProjectDependencies.kotlinGradlePlugin)
+        classpath(ProjectDependencies.mavenGradlePlugin)
+        classpath(ProjectDependencies.bintrayPlugin)
     }
 }
 
@@ -20,6 +20,6 @@ allprojects {
     }
 }
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

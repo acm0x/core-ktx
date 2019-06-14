@@ -2,13 +2,13 @@
 
 object Versions {
     // top-level versions
-    const val gradle  = "3.5.0-alpha12"
+    const val gradle  = "3.6.+"
     const val jacoco = "0.8.3"
     const val mavenGradle = "2.0"
     const val bintray = "1.8.1"
 
     // kotlin
-    const val kotlin = "1.3.10"
+    const val kotlin = "1.3.31"
     const val ktx = "1.0.0"
     const val kotlinCoroutines = "1.0.1"
 
