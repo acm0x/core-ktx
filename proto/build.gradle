@@ -1,4 +1,5 @@
-apply from: "${rootDir}/buildsystem/android_library.gradle"
+apply from: "${rootDir}/buildsystem/app_defaults.gradle"
+apply from: "${rootDir}/buildsystem/android_shared.gradle"
 
 dependencies {
     implementation MainApplicationDependencies.appCompat
@@ -8,4 +9,5 @@ dependencies {
     implementation MainApplicationDependencies.glide
     implementation MainApplicationDependencies.navigation
     implementation MainApplicationDependencies.navigationUi
+    implementation project(path: ':kotlin_core')
 }

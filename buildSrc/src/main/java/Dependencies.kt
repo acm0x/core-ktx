@@ -9,7 +9,7 @@ object Versions {
 
     // kotlin
     const val kotlin = "1.3.31"
-    const val ktx = "1.0.0"
+    const val ktx = "1.0.1"
     const val kotlinCoroutines = "1.0.1"
 
     // Android libraries
@@ -25,7 +25,7 @@ object Versions {
     // Third party libraries
     const val dagger = "2.21"
     const val assistedInject = "0.3.3"
-    const val retrofit = "2.5.0"
+    const val retrofit = "2.6.0"
     const val okhttp = "3.13.0"
     const val rxjava = "2.2.7"
     const val rxAndroid = "2.1.1"
