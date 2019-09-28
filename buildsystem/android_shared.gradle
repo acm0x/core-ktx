@@ -32,6 +32,20 @@ dependencies {
     testImplementation UnitTestingDependencies.robolectric
     testImplementation UnitTestingDependencies.robolectricMultidex
     testImplementation UnitTestingDependencies.archCore
+    // Add JUnit5 dependencies.
+    testImplementation(UnitTestingDependencies.junit5_jupiter)
+    testRuntimeOnly(UnitTestingDependencies.junit5_jupiter_runtime)
+    testImplementation(UnitTestingDependencies.junit5_jupiter_params)
+
+    // Add JUnit4 legacy dependencies.
+    testImplementation(UnitTestingDependencies.junit)
+    testRuntimeOnly(UnitTestingDependencies.junit5_vintage)
+
+    // Add AssertJ dependencies.
+    testImplementation(UnitTestingDependencies.assertj)
+
+    // Add MockK dependencies.
+    testImplementation(UnitTestingDependencies.mockk)
 
     //Acceptance tests dependencies
     androidTestImplementation AcceptanceTestingDependencies.testRunner
@@ -40,4 +54,19 @@ dependencies {
     androidTestImplementation AcceptanceTestingDependencies.espressoIntents
     androidTestImplementation AcceptanceTestingDependencies.androidAnnotations
 
+    // spek
+    testImplementation UnitTestingDependencies.spekDsl
+    testImplementation UnitTestingDependencies.spekRunner
+
+    // spek requires kotlin-reflect, omit when already in classpath
+    testImplementation MainApplicationDependencies.kotlinReflect
+
+
 }
+
+// Need this to use Java8 in order to use certain features of JUnit5 (such as calling static
+// methods on interfaces).
+
+// More info : https://github.com/mannodermaus/android-junit5/wiki/Getting-Started
+// More info : https://stackoverflow.com/a/45994990/2085356
+

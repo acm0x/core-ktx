@@ -3,6 +3,8 @@
  *
  * http://google.github.io/android-gradle-dsl/current/
  */
+apply plugin: "de.mannodermaus.android-junit5"
+
 android {
     compileSdkVersion Android.compileSdk
 
@@ -44,6 +46,23 @@ android {
         unitTests {
             includeAndroidResources true
             returnDefaultValues = true
+        }
+
+        junitPlatform {
+            filters {
+                engines {
+                    include 'spek2'
+                }
+            }
+            jacocoOptions {
+                // here goes all jacoco config, for example
+                html.enabled = true
+                xml.enabled = false
+                csv.enabled = false
+            }
+        }
+        unitTests.all {
+            testLogging.events = ["passed", "skipped", "failed"]
         }
     }
 

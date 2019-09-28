@@ -15,7 +15,7 @@ object Versions {
     // Android libraries
     const val appCompatKtx = "1.0.0"
     const val constraintLayoutKtx = "1.1.3"
-    const val archComponentsKtx = "2.0.0"
+    const val archComponentsKtx = "2.1.0"
     const val glide = "4.0.0"
     const val navigationKtx = "1.0.0-alpha07"
     const val coreKtx = "1.0.0"
@@ -45,6 +45,10 @@ object Versions {
     const val archUnit = "0.10.2"
     const val archCore = "1.1.1"
     const val kluent = "1.48"
+    const val assertj = "3.11.1"
+    const val junit5 = "5.2.0"
+    const val junitPlugin = "1.5.1.0"
+    const val mockk = "1.8.9"
 
     // Acceptance Testing
     const val runner = "1.1.0"
@@ -83,6 +87,9 @@ object Versions {
     // Flexbox
     const val flexbox = "1.0.0"
 
+    // Spek
+    const val spek = "2.0.7"
+
 }
 
 object Android {
@@ -98,10 +105,13 @@ object ProjectDependencies {
     const val kotlinGradlePlugin     = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val mavenGradlePlugin      = "com.github.dcendents:android-maven-gradle-plugin:${Versions.mavenGradle}"
     const val bintrayPlugin          = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.bintray}"
+    const val junit5Plugin          = "de.mannodermaus.gradle.plugins:android-junit5:${Versions.junitPlugin}"
 }
 
 object MainApplicationDependencies {
     const val kotlin                            = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    const val kotlin8                           = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+    const val kotlinReflect                     = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val kotlinCoroutines                  = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
     const val kotlinCoroutinesAndroid           = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutines}"
     const val ktxCore                           = "androidx.core:core-ktx:${Versions.coreKtx}"
@@ -167,9 +177,17 @@ object UnitTestingDependencies {
     const val powermockXstream          = "org.powermock:powermock-classloading-xstream:${Versions.powermock}"
     const val threeTenBp                = "org.threeten:threetenbp:${Versions.threeTenBp}"
     const val archunit                  = "com.tngtech.archunit:archunit:${Versions.archUnit}"
-    const val archCore                   = "android.arch.core:core-testing:${Versions.archCore}"
+    const val archCore                  = "android.arch.core:core-testing:${Versions.archCore}"
     const val kluent                    = "org.amshove.kluent:kluent:${Versions.kluent}"
     const val kluentAndroid             = "org.amshove.kluent:kluent-android:${Versions.kluent}"
+    const val junit5_jupiter            = "org.junit.jupiter:junit-jupiter-api:${Versions.junit5}"
+    const val junit5_jupiter_runtime    = "org.junit.jupiter:junit-jupiter-engine:${Versions.junit5}"
+    const val junit5_jupiter_params     = "org.junit.jupiter:junit-jupiter-params:${Versions.junit5}"
+    const val junit5_vintage            = "org.junit.vintage:junit-vintage-engine:${Versions.junit5}"
+    const val assertj                   = "org.assertj:assertj-core:${Versions.assertj}"
+    const val mockk                     = "io.mockk:mockk:${Versions.mockk}"
+    const val spekDsl                   = "org.spekframework.spek2:spek-dsl-jvm:${Versions.spek}"
+    const val spekRunner                = "org.spekframework.spek2:spek-runner-junit5:${Versions.spek}"
 }
 
 object AcceptanceTestingDependencies {

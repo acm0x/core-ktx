@@ -10,9 +10,4 @@ dependencies {
     implementation MainApplicationDependencies.navigation
     implementation MainApplicationDependencies.navigationUi
 
-    // koin
-
-    implementation("org.koin:koin-android:1.0.0")
-    implementation("org.koin:koin-android-viewmodel:1.0.0")
-    implementation("org.koin:koin-android-scope:1.0.0")
 }
