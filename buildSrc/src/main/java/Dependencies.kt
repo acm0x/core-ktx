@@ -10,7 +10,7 @@ object Versions {
     // kotlin
     const val kotlin = "1.3.31"
     const val ktx = "1.0.1"
-    const val kotlinCoroutines = "1.0.1"
+    const val kotlinCoroutines = "1.3.2"
 
     // Android libraries
     const val appCompatKtx = "1.0.0"
@@ -21,6 +21,7 @@ object Versions {
     const val coreKtx = "1.0.0"
     const val multiDexKtx = "2.0.0"
     const val playServices = "15.0.1"
+    const val lifecycleViewModelKtx = "2.1.0"
 
     // Third party libraries
     const val dagger = "2.21"
@@ -115,6 +116,7 @@ object MainApplicationDependencies {
     const val kotlinCoroutines                  = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
     const val kotlinCoroutinesAndroid           = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutines}"
     const val ktxCore                           = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val viewmodelLifecycle                = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewModelKtx}"
     const val navigation                        = "android.arch.navigation:navigation-fragment-ktx:${Versions.navigationKtx}"
     const val navigationUi                      = "android.arch.navigation:navigation-ui-ktx:${Versions.navigationKtx}"
     const val archComponents                    = "androidx.lifecycle:lifecycle-extensions:${Versions.archComponentsKtx}"
@@ -137,6 +139,7 @@ object MainApplicationDependencies {
     const val retrofit                          = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGson                      = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val retrofitRxAdapter                 = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
+    const val retrofitMoshiConverter             = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val okhttpLoggingInterceptor          = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     const val okhttp                            = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
     const val picasso                           = "com.squareup.picasso:picasso:${Versions.picasso}"
@@ -165,6 +168,7 @@ object MainApplicationDependencies {
 object UnitTestingDependencies {
     const val kotlin                    = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
     const val kotlinTest                = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
+    const val kotlinCoroutineTest       = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.kotlinCoroutines}"
     const val mockitoKotlin             = "com.nhaarman:mockito-kotlin:${Versions.mockitoKotlin}"
     const val robolectric               = "org.robolectric:robolectric:${Versions.robolectric}"
     const val robolectricMultidex       = "org.robolectric:shadows-multidex:${Versions.robolectric}"

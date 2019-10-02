@@ -25,9 +25,13 @@ fun View.cancelTransition() {
 
 fun View.isVisible() = this.visibility == View.VISIBLE
 
-fun View.visible() { this.visibility = View.VISIBLE }
+fun View.visible() {
+    this.visibility = View.VISIBLE
+}
 
-fun View.invisible() { this.visibility = View.GONE }
+fun View.invisible() {
+    this.visibility = View.GONE
+}
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int): View =
         LayoutInflater.from(context).inflate(layoutRes, this, false)
@@ -44,7 +48,7 @@ fun ImageView.loadUrlAndPostponeEnterTransition(url: String, activity: FragmentA
     Glide.with(context.applicationContext).load(url).into(target)
 }
 
-private class ImageViewBaseTarget (var imageView: ImageView?, var activity: FragmentActivity?) : BaseTarget<Drawable>() {
+private class ImageViewBaseTarget(var imageView: ImageView?, var activity: FragmentActivity?) : BaseTarget<Drawable>() {
     override fun removeCallback(cb: SizeReadyCallback?) {
         imageView = null
         activity = null

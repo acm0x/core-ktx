@@ -2,9 +2,13 @@ package uk.acm64.proto
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import uk.acm64.core.Failure
+import uk.acm64.core.extension.failure
+import uk.acm64.core.extension.observe
 import uk.acm64.core.kotlin.R
 import uk.acm64.proto.contract.di.ApplicationComponent
 import javax.inject.Inject
@@ -30,9 +34,16 @@ class ProtoActivity : FragmentActivity() {
     override fun onResume() {
         super.onResume()
         protoViewModel = viewModel(viewModelFactory) {
-//            observe(mortgageTableState, ::renderMortgageTable)
-//            failure(failure, ::handleFailure)
+            observe(protoFeatureState, ::renderFeaturesList)
+            failure(failure, ::handleFailure)
         }
+    }
+
+    fun handleFailure(failure: Failure?) {
+    }
+
+    private fun renderFeaturesList(protoModelState: ProtoModelState?) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
 

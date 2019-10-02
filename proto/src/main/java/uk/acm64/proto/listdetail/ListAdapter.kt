@@ -6,14 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
 import uk.acm64.proto.R
+import kotlin.properties.Delegates
 
 class ListAdapter : RecyclerView.Adapter<ListViewHolder>() {
 
-    var listUi: List<ListRowUi> = listOf()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    var listUi: List<ListRowUi> by Delegates.observable(listOf()) { _,_,_ ->
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int = listUi.size
 

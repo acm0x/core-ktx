@@ -29,6 +29,7 @@ dependencies {
     // Unit test
     testImplementation UnitTestingDependencies.junit
     testImplementation UnitTestingDependencies.kotlinTest
+    testImplementation UnitTestingDependencies.kotlinCoroutineTest
     testImplementation UnitTestingDependencies.mockito
     testImplementation(UnitTestingDependencies.mockitoKotlin) {
         exclude group: 'org.jetbrains.kotlin'

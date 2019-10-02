@@ -1,5 +1,6 @@
 package uk.acm64.core
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,12 +22,11 @@ abstract class BaseFragment : Fragment() {
 
     abstract fun snackbarBackgroudColor(): Int
 
-
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-        inflater.inflate(layoutId(), container, false)
+            inflater.inflate(layoutId(), container, false)
 
     open fun onBackPressed() {}
 
@@ -37,7 +37,7 @@ abstract class BaseFragment : Fragment() {
     internal fun hideProgress() = progressStatus(View.GONE)
 
     private fun progressStatus(viewStatus: Int) =
-        with(activity) { if (this is BaseActivity) this.progress.visibility = viewStatus }
+            with(activity) { if (this is BaseActivity) this.progress.visibility = viewStatus }
 
     open fun handleFailure(failure: Failure?) {
         when (failure) {
@@ -46,6 +46,7 @@ abstract class BaseFragment : Fragment() {
         }
     }
 
+    @SuppressLint("RestrictedApi")
     private fun snackbar(message: Int, duration: Int): Snackbar {
         val snackBar = Snackbar.make(view!!, message, duration)
         snackBar.view.setBackgroundColor(snackbarBackgroudColor())
