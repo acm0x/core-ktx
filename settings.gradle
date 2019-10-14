@@ -1,1 +1,1 @@
-include(":kotlin_core", ":proto")
+include(":kotlin_core", ":proto", ":lastfm")

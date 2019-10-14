@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Last Search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search_fragment_title">Last.fm Search</string>
+    <string name="parameters_search_term">Search for artist</string>
+    <string name="artist_info_title">Artist Info</string>
+    <string name="no_artists_found">No Artists found</string>
+</resources>

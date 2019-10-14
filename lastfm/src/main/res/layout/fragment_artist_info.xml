@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.artist.presentation.artistinfo.ArtistInfoFragment">
+
+    <ProgressBar
+        android:id="@+id/artist_info_progress"
+        style="@style/ProgressStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/artistInfoFragment_title"
+            style="@style/PageTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Cher" />
+
+        <ImageView
+            android:id="@+id/artistInfoFragment_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/artistInfoFragment_summary"
+            style="@style/ArtistInfoSummaryStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            tools:text="Some summary" />
+
+    </LinearLayout>
+</RelativeLayout>

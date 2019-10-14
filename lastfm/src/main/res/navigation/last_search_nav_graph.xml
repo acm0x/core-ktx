@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/last_search_nav_graph"
+    app:startDestination="@id/lastSearchFragment">
+    <fragment
+        android:id="@+id/lastSearchFragment"
+        android:name="uk.acm64.lastsearch.feature.artist.presentation.artists.ArtistsFragment"
+        android:label="@string/search_fragment_title" >
+        <action
+            android:id="@+id/action_lastSearchFragment_to_artistInfoFragment"
+            app:destination="@id/artistInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistInfoFragment"
+        android:name="uk.acm64.lastsearch.feature.artist.presentation.artistinfo.ArtistInfoFragment"
+        android:label="@string/artist_info_title"
+        tools:layout="@layout/fragment_artist_info" />
+</navigation>

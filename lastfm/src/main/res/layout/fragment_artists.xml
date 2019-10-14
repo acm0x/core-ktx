@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/artist_search_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:queryHint="@string/parameters_search_term" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="4"
+        android:layout_below="@id/artist_search_widget"
+        tools:listitem="@layout/list_item" />
+    <ProgressBar
+        android:id="@+id/artists_progress"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        tools:visibility="visible"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/artists_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/ProgressStyle"
+        android:text="@string/no_artists_found"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+</RelativeLayout>
