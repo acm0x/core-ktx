@@ -1,9 +1,9 @@
 package uk.acm64.proto
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import uk.acm64.core.BaseViewModel
 import uk.acm64.core.Failure
-import androidx.lifecycle.viewModelScope
 import uk.acm64.core.UseCase
 import javax.inject.Inject
 
@@ -17,8 +17,7 @@ class ProtoViewModel @Inject constructor(val getProtoFeatures: GetProtoFeatures,
         loadFeatures()
     }
 
-    private fun loadFeatures() = viewModelScope
-            getProtoFeatures(UseCase.None()) { it.either(::handleDetailsFailure, ::handleDetails) }
+    private fun loadFeatures() = getProtoFeatures(viewModelScope, UseCase.None()) { it.either(::handleDetailsFailure, ::handleDetails) }
 
     private fun handleDetailsFailure(failure: Failure) {
         return handleFailure(failure)

@@ -1,7 +1,6 @@
 package uk.acm64.lastsearch.feature.artist.presentation.artistinfo
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.igorwojda.showcase.library.testutils.CoroutinesTestRule
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -13,6 +12,7 @@ import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 import uk.acm64.lastsearch.feature.artist.domain.usecase.GetArtistInfoUseCase
+import uk.acm64.test.utils.CoroutinesTestRule
 
 @RunWith(MockitoJUnitRunner::class)
 class ArtistInfoViewModelTest {

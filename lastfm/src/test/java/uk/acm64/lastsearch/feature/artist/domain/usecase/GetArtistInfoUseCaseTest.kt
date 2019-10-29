@@ -1,7 +1,7 @@
 package uk.acm64.lastsearch.feature.artist.domain.usecase
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.igorwojda.showcase.library.testutils.CoroutinesTestRule
+import uk.acm64.test.utils.CoroutinesTestRule
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.doThrow

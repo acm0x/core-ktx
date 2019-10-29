@@ -3,15 +3,17 @@ object AppConfig {
     const val versionName = "0.1"
     const val versionCode = 1
 
+    const val coreLibraryName = ":core-ktx"
+
     // Last Fm specific properties
     const val lasfmBaseUrl = "https://ws.audioscrobbler.com/2.0/"
     const val lastfmApiKey = "f67f7b58fc991333e760f51a648f7508"
 }
 
 object AppPublish {
-    const val group = "uk.acm64.kotlin"
-    const val name = "core"
-    const val version = "0.2"
+    const val group = "uk.acm64"
+    const val name = "core-ktx"
+    const val version = "0.3"
 }
 
 object StoreDebug {

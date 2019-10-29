@@ -9,5 +9,5 @@ dependencies {
     implementation MainApplicationDependencies.glide
     implementation MainApplicationDependencies.navigation
     implementation MainApplicationDependencies.navigationUi
-    implementation project(path: ':kotlin_core')
+    implementation project(AppConfig.coreLibraryName)
 }

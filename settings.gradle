@@ -1,1 +1,2 @@
 include(":kotlin_core", ":proto", ":lastfm")
+project(":kotlin_core").name = AppPublish.name

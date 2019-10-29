@@ -11,7 +11,7 @@ android {
 }
 
 dependencies {
-    implementation(project(':kotlin_core'))
+    implementation(project(AppConfig.coreLibraryName))
     implementation MainApplicationDependencies.appCompat
     implementation MainApplicationDependencies.archComponents
     implementation MainApplicationDependencies.archComponentsRuntime

@@ -1,5 +1,10 @@
 apply from: "${rootDir}/buildsystem/android_library.gradle"
-apply from: "${rootDir}/buildsystem/publish.gradle"
+//apply from: "${rootDir}/buildsystem/publish.gradle"
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+version AppPublish.version
+group = AppPublish.group
 
 dependencies {
     implementation MainApplicationDependencies.appCompat
