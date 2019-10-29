@@ -1,10 +1,26 @@
-## Publishing
+### Release
 
-File at: buildSrc/src/main/java/AppConfig.kt
+[![](https://jitpack.io/v/ACM64/core-ktx.svg)](https://jitpack.io/#ACM64/core-ktx)
 
-Update AppPublish.version to reflect version
+### How to
+To get this library into your build:
 
-`./gradlew bintrayUpload` to upload,
-then `./gradlew bintrayPublish`
+__Step 1__. Add the JitPack repository to your build file
 
-TODO: move keys into circleCI config
+Add it in your root build.gradle at the end of repositories:
+ ```gradle
+  allprojects {
+    repositories {
+      ...
+      maven { url “https://jitpack.io” }
+    }
+ } 
+ ```
+ 
+ __Step 2__. Add the dependency
+ 
+ ```gradle
+    dependencies {
+      implementation 'com.github.ACM64:core-ktx:0.3'
+    }
+  ```
