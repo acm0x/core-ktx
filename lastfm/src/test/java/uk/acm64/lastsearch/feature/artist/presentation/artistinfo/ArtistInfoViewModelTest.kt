@@ -11,8 +11,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
+import uk.acm64.lastsearch.feature.artist.CoroutinesTestRule
 import uk.acm64.lastsearch.feature.artist.domain.usecase.GetArtistInfoUseCase
-import uk.acm64.test.utils.CoroutinesTestRule
 
 @RunWith(MockitoJUnitRunner::class)
 class ArtistInfoViewModelTest {
