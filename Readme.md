@@ -21,6 +21,6 @@ Add it in your root build.gradle at the end of repositories:
  
  ```gradle
     dependencies {
-      implementation 'com.github.ACM64:core-ktx:0.4'
+      implementation 'com.github.acm0x:core-ktx:0.4'
     }
   ```
