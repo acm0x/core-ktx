@@ -1,6 +1,6 @@
 ### Release
 
-[![](https://jitpack.io/v/ACM64/core-ktx.svg)](https://jitpack.io/#ACM64/core-ktx) [![Build Status](https://travis-ci.org/ACM64/core-ktx.svg?branch=develop)](https://travis-ci.org/ACM64/core-ktx)
+[![](https://jitpack.io/v/acm0x/core-ktx.svg)](https://jitpack.io/#acm0x/core-ktx) [![Build Status](https://travis-ci.org/acm0x/core-ktx.svg?branch=develop)](https://travis-ci.org/acm0x/core-ktx)
 
 ### How to
 To get this library into your build:
